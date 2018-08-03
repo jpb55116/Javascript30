@@ -6,6 +6,16 @@
 </head>
 <body>
   <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
+  <form>
+      <h3>Distance from Denver</h3>
+      <input type= "range" min="1" max="340" value="1" class="slider" id="distanceThreshold">
+      <br>
+      <h3>Hike Distance</h3>
+      <input type= "range" min="1" max="2000" value="1" class="slider" id="trailThreshold">
+      <br>
+      <br>
+      <button>Submit</button>
+    </form>
   <script>
     // Get your shorts on - this is an array workout!
     // ## Array Cardio Day 1
@@ -29,11 +39,20 @@
 
     const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry', 'Beethoven, Ludwig', 'Begin, Menachem', 'Belloc, Hilaire', 'Bellow, Saul', 'Benchley, Robert', 'Benenson, Peter', 'Ben-Gurion, David', 'Benjamin, Walter', 'Benn, Tony', 'Bennington, Chester', 'Benson, Leana', 'Bent, Silas', 'Bentsen, Lloyd', 'Berger, Ric', 'Bergman, Ingmar', 'Berio, Luciano', 'Berle, Milton', 'Berlin, Irving', 'Berne, Eric', 'Bernhard, Sandra', 'Berra, Yogi', 'Berry, Halle', 'Berry, Wendell', 'Bethea, Erin', 'Bevan, Aneurin', 'Bevel, Ken', 'Biden, Joseph', 'Bierce, Ambrose', 'Biko, Steve', 'Billings, Josh', 'Biondo, Frank', 'Birrell, Augustine', 'Black Elk', 'Blair, Robert', 'Blair, Tony', 'Blake, William'];
 
+    const fifteen = inventors.filter(inventor =>(inventor.year >= trailThreshold));
+
+    console.log(fifteen);
+    console.log(trailThreshold.value);
+
+
+/*
+
+
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
     const fifteen = inventors.filter(inventor => (inventor.year >= 1500 && inventor.year < 1600));
 
-    console.table(fifteen);
+    console.log(fifteen);
 
     // Array.prototype.map()
     // 2. Give us an array of the inventor first and last names
@@ -100,7 +119,7 @@
     }, {});
 
     console.log(transportation);
-
+*/
   </script>
 </body>
 </html>
